@@ -1,0 +1,150 @@
+/*
+ Theme Name:   Hatecrime Child
+ Template:     hatecrime
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Text Domain:  hatecrime-child
+*/
+
+#content .entry-content p {
+	margin-bottom: 0;
+}
+
+.entry-content ul > li.post-attachment {
+    float: left;
+    width: 48%;
+    padding-right: 20px;
+    margin-top: 20px
+}
+
+#content li.post-attachment img {
+    float: left;
+    padding-right: 20px;
+}
+
+#fitxa {
+    float: right;
+    width: 300px;
+    border: 1px solid #000;
+    margin: 10px;
+    padding-left: 20px;
+}
+
+.entry-content {
+    clear: none;
+}
+
+#topbar {
+    display: none;
+}
+
+.social {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+}
+
+.social img {
+	width: 150px;
+}
+
+#access li.qtranxs-lang-menu {
+    float: right;
+}
+
+#access div.menu {
+    max-width: none;
+    margin-left: 39px;
+}
+
+#access a span {
+    padding-top: 10px; 
+    padding-bottom: 10px; 
+}
+
+#bg_image {
+    display: inline;
+}
+
+#branding {
+    background-color: #000;
+}
+
+.page #access ul > li.current_page_item, .page #access ul > li.current-menu-item, .page #access ul > li.current_page_ancestor, .page #access ul > li.current-menu-ancestor {
+    background-color: #7a232f;
+}
+
+/****************************
+* slider
+*/
+.slider-text-separator {
+	display: none !important;
+}
+
+.nivo-caption {
+	top: auto !important;
+    bottom: 15% !important;
+}
+
+.slide-text {
+	text-align: center !important;
+	background-color: transparent;
+}
+
+.nivo-caption .inline-slide-text {
+	font-size: 20px !important;
+	background-color: rgba(0, 0, 0, 0.8) !important;
+	box-shadow: none !important;
+	padding: 5px;
+}
+
+/****************************
+* footer
+*/
+#footer2-inside {
+    text-align: center;
+}
+
+#footer2-inside table td {
+	font-size: 14px;
+}
+
+/****************************
+* sidebar
+*/
+.widget-area .xoxo a {
+    display: block;
+}
+
+/****************************
+* map
+*/
+.page-id-2 .entry-title, .page-id-2 #breadcrumbs, .page-id-44 .entry-title, .page-id-44 #breadcrumbs {
+    display: none;
+}
+
+.page-id-2 #main, .page-id-44 #main {
+    margin-top:0;
+}
+
+.page-id-2 #forbottom, .page-id-44 #forbottom {
+    max-width: none;
+    padding-top:0;
+} 
+
+.page-id-2 .entry-content, .page-id-44 .entry-content {
+    padding-top:0;
+} 
+
+div.page {
+    margin-bottom: 0;
+}
+
+span.edit-link {
+    display: none;
+}
+
+#footer {
+    margin-top: 0;
+}

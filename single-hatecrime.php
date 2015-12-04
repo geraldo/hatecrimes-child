@@ -17,8 +17,8 @@ get_header();?>
 
 				<div id="tabs">
 				<ul>
-				<li><a href="#tabs-1">Ficha</a></li>
-				<li><a href="#tabs-2">Fuentes</a></li>
+				<li><a href="#tabs-1"><?php _e("Register", "hatecrimes")?></a></li>
+				<li><a href="#tabs-2"><?php _e("Sources", "hatecrimes")?></a></li>
 				</ul>
 
 				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -81,16 +81,32 @@ get_header();?>
 								else _e("unknown", "hatecrimes");
 							?>
 							</p>
+
 							<p><strong><?php _e("Sentence", "hatecrimes")?>: </strong>
 							<?php 
-								$out = get_post_meta($post->ID, "sentence", true); 
+								$terms = get_the_terms($post->ID, "sentence_type");
+								$out = "";
+								foreach ($terms as $i => $term) {
+									if ($i > 0) $out .= ", ";
+									$out .= $term->name;
+								}
 								if ($out !== "") echo $out;
 								else _e("unknown", "hatecrimes");
 							?>
-							</p>
-							<p><strong><?php _e("Age of aggressor", "hatecrimes")?>: </strong>
+							</p>							
 							<?php 
-								$out = get_post_meta($post->ID, "age", true); 
+								$out = get_post_meta($post->ID, "sentence", true); 
+								if ($out !== "") echo "<p>".$out."</p>";
+							?>
+
+							<p><strong><?php _e("Delict", "hatecrimes")?>: </strong>
+							<?php 
+								$terms = get_the_terms($post->ID, "delict");
+								$out = "";
+								foreach ($terms as $i => $term) {
+									if ($i > 0) $out .= ", ";
+									$out .= $term->name;
+								}
 								if ($out !== "") echo $out;
 								else _e("unknown", "hatecrimes");
 							?>
@@ -107,7 +123,6 @@ get_header();?>
 
 					<div id="tabs-2">
 						<div class="entry-content">
-							<p><strong><?php _e("Sources", "hatecrimes")?>: </strong>
 							<?php 
 								$sources = explode("\n", trim(get_post_meta($post->ID, "sources", true)));
 								if ($sources !== false && sizeOf($sources) > 0) {
@@ -124,7 +139,7 @@ get_header();?>
 											} else if (substr( $src, 0, 4 ) === "http") {
 												echo "<a target='_blank' href='".$src."'>".$src."</a>";
 											} else if ($src == "INFORME RAXEN") {
-												echo "<a href='http://www.movimientocontralaintolerancia.com/html/raxen/raxen.asp'><img src='http://www.movimientocontralaintolerancia.com/images/raxen_especial.gif'></a>";
+												//echo "<a href='http://www.movimientocontralaintolerancia.com/html/raxen/raxen.asp'><img src='http://www.movimientocontralaintolerancia.com/images/raxen_especial.gif'></a>";
 											} else {
 												echo $src;
 											}
@@ -150,13 +165,18 @@ get_header();?>
 						            }
 									echo "</ul></p>";
 						        }
+
+						        //add informe raxen to all sources
+								echo "<p style='clear:both; padding: 28px;'><a target='_blank' href='http://www.movimientocontralaintolerancia.com/html/raxen/raxen.asp'><img src='http://www.movimientocontralaintolerancia.com/images/raxen_especial.gif'></a></p>";
 							?>
-							</p>
+
 							</p>
 						</div><!-- .entry-custom -->
 					</div>
 
 				</div><!-- #post-## -->
+
+				<hr>
 
 				<div id="nav-below" class="navigation">
 					<div class="nav-previous"><?php previous_post_link( "%link", "<i class='icon-left-dir'></i> %title" ); ?></div>
@@ -174,8 +194,8 @@ get_header();?>
 
 <?php get_footer(); ?>
 
-<link rel="stylesheet" href="http://crimenesdeodio.info/mapa/lib/leaflet.css" />
-<script src="http://crimenesdeodio.info/mapa/lib/leaflet.js"></script>
+<link rel="stylesheet" href="http://crimenesdeodio.info/wp-content/plugins/hatecrimes-map/lib/leaflet.css" />
+<script src="http://crimenesdeodio.info/wp-content/plugins/hatecrimes-map/lib/leaflet.js"></script>
 <script>
 	jQuery( "#tabs" ).tabs();
 

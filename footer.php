@@ -12,7 +12,6 @@
 ?>	<div style="clear:both;"></div>
 	</div> <!-- #forbottom -->
 
-
 	<footer id="footer" role="contentinfo">
 		<div id="colophon">
 		
@@ -22,7 +21,7 @@
 
 		<div id="footer2">
 			<div id="footer2-inside">
-				<br><a href="https://creativecommons.org/licenses/by-sa/3.0/deed.ca"><img src="http://barrisinnovacio.net/wp-content/uploads/2015/05/cc-by-sa.png" style="width:100px"></a>
+				<a href="/copyleft">copyleft crimenesdeodio.info 2015</a>
 			</div> <!-- #footer2-inside -->
 		</div><!-- #footer2 -->
 

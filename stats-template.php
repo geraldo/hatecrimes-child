@@ -16,7 +16,8 @@ $args = array(
     'post_type' => 'hatecrime',
 );
 $my_query = new WP_Query($args);
-echo "Total: <a href='http://crimenesdeodio.info/?post_type=hatecrime'>" . $my_query->found_posts . "</a>";
+$total = $my_query->found_posts;
+echo "Total: <a href='http://crimenesdeodio.info/?post_type=hatecrime'>" . $total . "</a>";
 
 /********************/
 
@@ -75,48 +76,51 @@ for ($i = 1991; $i < 2016; $i++) {
 
 echo "<h2>por sentencia</h2>";
 
-$sentences = array(
-	'NO', 'absuelto', 'archivado', 'condenado', 'prisión', 'carcel', 'arresto', 'internamiento', 'NO HAY IMPUTADOS',
-);
 
-foreach ($sentences as $sentence) {
+$terms = get_terms(array('sentence_type'));
+
+foreach ($terms as $term) {
 	$args = array(
-		'post_type'    => 'hatecrime',
-		'meta_key'     => 'sentence',
-		'meta_value'   => $sentence,
-		'meta_compare' => 'LIKE',
+	    'post_type' => 'hatecrime',
+		'tax_query' => array(
+			array(
+				'taxonomy' => 'sentence_type',
+				'field'    => 'slug',
+				'terms'    => $term->slug,
+			),
+		),
 	);
-	$my_query = new WP_Query( $args );
-	echo $sentence . ": " . $my_query->found_posts . "<br>";
+	$my_query = new WP_Query($args);
+	echo $term->name . ": " . $my_query->found_posts . "<br>";
 }
-
-//desconocido
-echo "desconocido: " . getUnknown('sentence') . "<br>";
 
 /********************/
 
-echo "<h2>por cualificación legal</h2>";
+echo "<h2>por delito</h2>";
 
-$legals = array(
-	'NO', 'asesinato', 'homicidio', 'archivado', 'Riña tumultuaria',
-);
+$terms = get_terms(array('delict'));
 
-foreach ($legals as $legal) {
+$num = 0;
+
+foreach ($terms as $term) {
 	$args = array(
-		'post_type'    => 'hatecrime',
-		'meta_key'     => 'legal',
-		'meta_value'   => $legal,
-		'meta_compare' => 'LIKE',
+	    'post_type' => 'hatecrime',
+		'tax_query' => array(
+			array(
+				'taxonomy' => 'delict',
+				'field'    => 'slug',
+				'terms'    => $term->slug,
+			),
+		),
 	);
-	$my_query = new WP_Query( $args );
-	echo $legal . ": " . $my_query->found_posts . "<br>";
+	$my_query = new WP_Query($args);
+	echo $term->name . ": " . $my_query->found_posts . "<br>";
+	$num++;
 }
-
-echo "desconocido: " . getUnknown('legal') . "<br>";
 
 /********************/
 
-echo "<h2>por edad del agresor</h2>";
+/*echo "<h2>por edad del agresor</h2>";
 
 $args = array(
 	'post_type'    => 'hatecrime',
@@ -148,7 +152,7 @@ $args = array(
 $my_query = new WP_Query( $args );
 echo ">=30: " . $my_query->found_posts . "<br>";
 
-echo "desconocido: " . getUnknown('age') . "<br>";
+echo "desconocido: " . getUnknown('age') . "<br>";*/
 
 /********************/
 

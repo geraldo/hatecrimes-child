@@ -32,9 +32,15 @@ function writeJS($foutput, $num, $offset) {
 
 			$terms = get_the_terms($post->ID, 'type');
 			$cats = "";
+			$catSlugs = "";
 			foreach ($terms as $i => $term) {
-				if ($i > 0) $cats .= ", ";
+				//implode categories
+				if ($i > 0) {
+					$cats .= ", ";
+					$catSlugs .= ", ";
+				}
 				$cats .= $term->name;
+				$catSlugs .= $term->slug;
 			}
 
 			$features['features'][] = array(
@@ -43,6 +49,7 @@ function writeJS($foutput, $num, $offset) {
 					'title' => get_the_title(),
 					'description' => get_the_content(),
 					'category' => $cats,
+					'catSlug' => $catSlugs,
 					'date' => get_post_meta(get_the_ID(), 'date', true),
 					//'street' => get_post_meta(get_the_ID(), 'street', true),
 					//'neighbourhood' => get_post_meta(get_the_ID(), 'neighbourhood', true),

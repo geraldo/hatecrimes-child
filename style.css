@@ -7,6 +7,10 @@
  Text Domain:  hatecrime-child
 */
 
+a, a:link, a:visited, a:active, a:hover {
+    color: #7a232f;
+}
+
 #content .entry-content p {
 	margin-bottom: 0;
 }
@@ -110,6 +114,10 @@
 	font-size: 14px;
 }
 
+#footer a {
+    color: #fff;
+}
+
 /****************************
 * sidebar
 */
@@ -147,4 +155,54 @@ span.edit-link {
 
 #footer {
     margin-top: 0;
+}
+
+/****************************
+* tabs
+*/
+
+#tabs {
+    background: none;
+    border: none;
+}
+
+#tabs ul {
+    background: none;
+    border-color: #ddd;
+}
+
+#tabs ul li a {
+    color: #000;
+}
+
+#tabs ul li.ui-state-active {
+    border-color: #000;
+}
+
+#main #forbottom {
+    max-width: none;
+    margin: 20px;
+}
+
+.ui-tabs .ui-tabs-panel {
+    padding: 0;
+}
+
+/****************************
+* media
+*/
+
+@media (max-width: 800px) {
+    #bg_image {
+        width: initial !important;
+    }
+    #map2 {
+        display: none;
+    }
+    #main {
+        background-color: transparent;
+    }
+    #access {
+        z-index: 1;
+    }
 }

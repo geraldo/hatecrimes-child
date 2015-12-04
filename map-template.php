@@ -30,6 +30,7 @@ get_header();?>
 				<script src="http://crimenesdeodio.info/wp-content/plugins/hatecrimes-map/lib/leaflet.js"></script>
 				<script src="http://crimenesdeodio.info/wp-content/plugins/hatecrimes-map/lib/leaflet.markercluster.js"></script>
 				<script src="http://crimenesdeodio.info/wp-content/plugins/hatecrimes-map/lib/date.format.js"></script>
+				<script src="http://crimenesdeodio.info/wp-content/plugins/hatecrimes-map/keys.js"></script>
 				<script src="http://crimenesdeodio.info/wp-content/plugins/hatecrimes-map/map.js"></script>
 
 		</section><!-- #container -->

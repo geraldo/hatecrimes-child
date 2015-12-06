@@ -2,17 +2,17 @@
 /**
 	Template Name: Export
 */
-
-$url = '/home/crimenesea/www/wp-content/export/hatecrimes.js';
+$lang =  qtranxf_getLanguage();
+$url = "/home/crimenesea/www/wp-content/export/hatecrimes.".$lang.".js";
 //$foutput = (file_exists($url)) ? fopen($url, "w") : fopen($url, "w+");
 $foutput = fopen($url, "w");
 //total amount: wp_count_posts('entitats')->publish = 711
 //fwrite($foutput, "var hatecrimes =");
-writeJS($foutput, 1000, 0);
+writeJS($foutput, 1000, 0, $url);
 //stop to write geojson file
 fclose($foutput);
 
-function writeJS($foutput, $num, $offset) {
+function writeJS($foutput, $num, $offset, $url) {
 
 	$my_query = new WP_Query('post_type=hatecrime&posts_per_page='.$num.'&offset='.$offset.'&order=ASC&orderby=ID');
 
@@ -43,6 +43,14 @@ function writeJS($foutput, $num, $offset) {
 				$catSlugs .= $term->slug;
 			}
 
+			$sentence = get_the_terms($post->ID, 'sentence_type');
+			if ($sentence && sizeof($sentence) == 1) $sentence = $sentence[0]->name;
+			else $sentence = __("unknown", "hatecrimes");
+
+			$delict = get_the_terms($post->ID, 'delict');
+			if ($delict && sizeof($delict) == 1) $delict = $delict[0]->name;
+			else $delict = __("unknown", "hatecrimes");
+
 			$features['features'][] = array(
 				'properties' => array(
 					'id' => $post->ID,
@@ -56,8 +64,8 @@ function writeJS($foutput, $num, $offset) {
 					'city' => get_post_meta(get_the_ID(), 'city', true),
 					'province' => get_post_meta(get_the_ID(), 'province', true),
 					//'trial' => get_post_meta(get_the_ID(), 'trial', true),
-					//'sentence' => get_post_meta(get_the_ID(), 'sentence', true),
-					//'legal' => get_post_meta(get_the_ID(), 'legal', true),
+					'sentence' => $sentence,
+					'delict' => $delict,
 					//'age' => get_post_meta(get_the_ID(), 'age', true),
 					//'sources' => get_post_meta(get_the_ID(), 'sources', true),
 				),
@@ -77,7 +85,7 @@ function writeJS($foutput, $num, $offset) {
 		fwrite($foutput, json_encode($features));
 
 		$n--;
-		echo $n." datasets written to json file ".$url."<br>";
+		echo $n." datasets written to json file ".$url;
 	}
 }
 ?>

@@ -1,7 +1,7 @@
 # hatecrimes-child
 Wordpress Nirvana child theme for mapping hate crimes
 
-This theme is used for mapping hate crimes in Spain at http://crimenesdeodio.info. It's a child theme of Wordpress [Nirvana](https://wordpress.org/themes/nirvana/).
+This theme is used for mapping hate crimes in Spain at https://crimenesdeodio.info. It's a child theme of Wordpress [Nirvana](https://wordpress.org/themes/nirvana/).
 
 The most important template files can be easily used with other Wordpress themes:
 

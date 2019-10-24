@@ -37,8 +37,8 @@
 				<div style="clear:both;"></div>
 
 				<div class="social">
-					<a href="https://www.facebook.com/Cr%C3%ADmenes-de-Odio-1645711305670191/"><img src="http://crimenesdeodio.info/wp-content/uploads/2015/11/FB_capcalera.png" /></a><br>
-					<a href="https://twitter.com/crimenesdeodio"><img src="http://crimenesdeodio.info/wp-content/uploads/2015/11/TW_capcalera.png" /></a>
+					<a href="https://www.facebook.com/Cr%C3%ADmenes-de-Odio-1645711305670191/"><img src="<?php echo get_site_url(); ?>/wp-content/uploads/2015/11/FB_capcalera.png" /></a><br>
+					<a href="https://twitter.com/crimenesdeodio"><img src="<?php echo get_site_url(); ?>/wp-content/uploads/2015/11/TW_capcalera.png" /></a>
 				</div>
 			</div><!-- #branding -->
 			<a id="nav-toggle"><span>&nbsp;</span></a>

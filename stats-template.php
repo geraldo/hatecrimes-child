@@ -79,6 +79,8 @@ echo "<h2>por sentencia</h2>";
 
 $terms = get_terms(array('sentence_type'));
 
+$num = 0;
+
 foreach ($terms as $term) {
 	$args = array(
 	    'post_type' => 'hatecrime',
@@ -92,7 +94,11 @@ foreach ($terms as $term) {
 	);
 	$my_query = new WP_Query($args);
 	echo $term->name . ": " . $my_query->found_posts . "<br>";
+
+	$num += $my_query->found_posts;
 }
+$num = $total - $num;
+echo "Desconegut: " . $num;
 
 /********************/
 

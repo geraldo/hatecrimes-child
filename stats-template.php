@@ -17,7 +17,7 @@ $args = array(
 );
 $my_query = new WP_Query($args);
 $total = $my_query->found_posts;
-echo "Total: <a href='http://crimenesdeodio.info/?post_type=hatecrime'>" . $total . "</a>";
+echo "Total: <a href='".get_site_url()."/?post_type=hatecrime'>" . $total . "</a>";
 
 /********************/
 
@@ -37,7 +37,7 @@ foreach ($terms as $term) {
 		),
 	);
 	$my_query = new WP_Query($args);
-	echo $term->name . ": <a href='http://crimenesdeodio.info/type/" . $term->slug . "'>" . $my_query->found_posts . "</a><br>";
+	echo $term->name . ": <a href='".get_site_url()."/type/" . $term->slug . "'>" . $my_query->found_posts . "</a><br>";
 }
 
 /********************/

@@ -15,12 +15,6 @@ get_header();?>
 			
 				<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-				<div id="tabs">
-				<ul>
-				<li><a href="#tabs-1"><?php _e("Register", "hatecrimes")?></a></li>
-				<li><a href="#tabs-2"><?php _e("Sources", "hatecrimes")?></a></li>
-				</ul>
-
 				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<h1 class="entry-title">
 						<?php 
@@ -35,6 +29,12 @@ get_header();?>
 						?>
 					</h1>
 					<?php cryout_post_title_hook(); ?>
+
+					<div id="tabs">
+					<ul>
+					<li><a href="#tabs-1"><?php _e("Register", "hatecrimes")?></a></li>
+					<li><a href="#tabs-2"><?php _e("Sources", "hatecrimes")?></a></li>
+					</ul>
 
 					<div id="tabs-1">
 						<div id="fitxa" class="entry-content">
@@ -138,8 +138,6 @@ get_header();?>
 												echo "<a target='_blank' href='".$url."'>".$name."</a>";
 											} else if (substr( $src, 0, 4 ) === "http") {
 												echo "<a target='_blank' href='".$src."'>".$src."</a>";
-											} else if ($src == "INFORME RAXEN") {
-												//echo "<a href='http://www.movimientocontralaintolerancia.com/html/raxen/raxen.asp'><img src='http://www.movimientocontralaintolerancia.com/images/raxen_especial.gif'></a>";
 											} else {
 												echo $src;
 											}
@@ -165,9 +163,6 @@ get_header();?>
 						            }
 									echo "</ul></p>";
 						        }
-
-						        //add informe raxen to all sources
-								echo "<p style='clear:both; padding: 28px;'><a target='_blank' href='http://www.movimientocontralaintolerancia.com/html/raxen/raxen.asp'><img src='http://www.movimientocontralaintolerancia.com/images/raxen_especial.gif'></a></p>";
 							?>
 
 							</p>
@@ -194,8 +189,8 @@ get_header();?>
 
 <?php get_footer(); ?>
 
-<link rel="stylesheet" href="http://crimenesdeodio.info/wp-content/plugins/hatecrimes-map/lib/leaflet.css" />
-<script src="http://crimenesdeodio.info/wp-content/plugins/hatecrimes-map/lib/leaflet.js"></script>
+<link rel="stylesheet" href="<?php echo get_site_url(); ?>/wp-content/plugins/hatecrimes-map/lib/leaflet.css" />
+<script src="<?php echo get_site_url(); ?>/wp-content/plugins/hatecrimes-map/lib/leaflet.js"></script>
 <script>
 	jQuery( "#tabs" ).tabs();
 
@@ -208,8 +203,8 @@ get_header();?>
 
 		L.tileLayer('https://{s}.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={token}', {
 			maxZoom: 18,
-			id: 'gkogler.l91ko9dl',
-			token: 'pk.eyJ1IjoiZ2tvZ2xlciIsImEiOiJSQ1Nld2NrIn0.yW2DR2Lp2NS1xPJsOddW9Q'
+			id: 'mapadelodi.f6e57a2f',
+			token: 'pk.eyJ1IjoibWFwYWRlbG9kaSIsImEiOiI1M2ZkODMzYzJkYTcwMmU0MDA5YmQyNTMyYTEyOGJjNCJ9.Kr-J9A2klHClDqTlvR8fTA'
 		}).addTo(this.map);
 
 		var street = '<?php echo get_post_meta($post->ID, "street", true); ?>';

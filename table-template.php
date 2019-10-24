@@ -25,7 +25,7 @@ get_header();?>
 				<tbody></tbody>
 			</table>
 
-			<!--<script src="http://crimenesdeodio.info/wp-content/plugins/hatecrimes-table/table.js"></script>-->
+			<!--<script src="<?php echo get_site_url(); ?>/wp-content/plugins/hatecrimes-table/table.js"></script>-->
 
 		</section><!-- #container -->
 

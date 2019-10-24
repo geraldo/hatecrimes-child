@@ -69,6 +69,8 @@ if (isset($_GET['t']) &&
 
 		$terms = get_terms(array('sentence_type'));
 
+		$num = 0;
+
 		foreach ($terms as $term) {
 			$args = array(
 			    'post_type' => 'hatecrime',
@@ -82,7 +84,16 @@ if (isset($_GET['t']) &&
 			);
 			$my_query = new WP_Query($args);
 			echo $term->name . "\t" . $my_query->found_posts . "\r\n";
+			$num += $my_query->found_posts;
 		}
+
+		// get total
+		$args = array(
+		    'post_type' => 'hatecrime',
+		);
+		$my_query = new WP_Query($args);
+		$num = $my_query->found_posts - $num;
+		echo "Desconegut\t" . $num;
 	}
 	else if ($_GET['t'] == 'delito') {
 		echo "delito\tnum\r\n";

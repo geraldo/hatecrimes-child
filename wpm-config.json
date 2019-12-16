@@ -1,0 +1,10 @@
+{
+	"post_types": {
+		"hatecrime": {}
+	},
+	"taxonomies": {
+		"type": {},
+		"sentence_type": {},
+		"delict": {}
+	}
+}

@@ -2,7 +2,7 @@
 /**
 	Template Name: Export
 */
-$lang =  qtranxf_getLanguage();
+$lang =  wpm_get_language();
 $url = "/home/crimenesea/www/wp-content/export/hatecrimes.".$lang.".js";
 //$foutput = (file_exists($url)) ? fopen($url, "w") : fopen($url, "w+");
 $foutput = fopen($url, "w");

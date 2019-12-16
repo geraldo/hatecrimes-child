@@ -53,8 +53,20 @@ a, a:link, a:visited, a:active, a:hover {
 	width: 150px;
 }
 
-#access li.qtranxs-lang-menu {
+#access li.wpm-languages {
     float: right;
+}
+
+#access li.wpm-languages.active-language {
+    font-weight: bold;
+}
+
+#access li.wpm-languages a>span {
+    padding: 10px;
+}
+
+#access li.wpm-languages a>span>span {
+    padding: 0;
 }
 
 #access div.menu {

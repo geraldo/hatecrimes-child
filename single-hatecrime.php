@@ -43,7 +43,7 @@ get_header();?>
 								$terms = get_the_terms($post->ID, "type");
 								foreach ($terms as $i => $term) {
 									if ($i > 0) echo ", ";
-									echo $term->name;
+									echo wpm_translate_string($term->name);
 								}
 							?>
 							</p>
@@ -88,7 +88,7 @@ get_header();?>
 								$out = "";
 								foreach ($terms as $i => $term) {
 									if ($i > 0) $out .= ", ";
-									$out .= $term->name;
+									$out .= wpm_translate_string($term->name);
 								}
 								if ($out !== "") echo $out;
 								else _e("unknown", "hatecrimes");
@@ -96,7 +96,7 @@ get_header();?>
 							</p>							
 							<?php 
 								$out = get_post_meta($post->ID, "sentence", true); 
-								if ($out !== "") echo "<p>".$out."</p>";
+								if ($out !== "") echo "<p>".wpm_translate_string($out)."</p>";
 							?>
 
 							<p><strong><?php _e("Delict", "hatecrimes")?>: </strong>
@@ -105,7 +105,7 @@ get_header();?>
 								$out = "";
 								foreach ($terms as $i => $term) {
 									if ($i > 0) $out .= ", ";
-									$out .= $term->name;
+									$out .= wpm_translate_string($term->name);
 								}
 								if ($out !== "") echo $out;
 								else _e("unknown", "hatecrimes");

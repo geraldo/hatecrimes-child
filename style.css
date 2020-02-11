@@ -7,8 +7,25 @@
  Text Domain:  hatecrime-child
 */
 
+html, body, div, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    font-family: WorkSans-Regular;
+}
+
+b, strong {
+    font-family: WorkSans-Bold;
+    font-weight: normal;
+    font-style: normal;
+}
+
 a, a:link, a:visited, a:active, a:hover {
-    color: #7a232f;
+    color: #e01a4d;
 }
 
 #content .entry-content p {
@@ -53,32 +70,6 @@ a, a:link, a:visited, a:active, a:hover {
 	width: 150px;
 }
 
-#access li.wpm-languages {
-    float: right;
-}
-
-#access li.wpm-languages.active-language {
-    font-weight: bold;
-}
-
-#access li.wpm-languages a>span {
-    padding: 10px;
-}
-
-#access li.wpm-languages a>span>span {
-    padding: 0;
-}
-
-#access div.menu {
-    max-width: none;
-    margin-left: 39px;
-}
-
-#access a span {
-    padding-top: 10px; 
-    padding-bottom: 10px; 
-}
-
 #bg_image {
     display: inline;
 }
@@ -87,8 +78,91 @@ a, a:link, a:visited, a:active, a:hover {
     background-color: #000;
 }
 
-.page #access ul > li.current_page_item, .page #access ul > li.current-menu-item, .page #access ul > li.current_page_ancestor, .page #access ul > li.current-menu-ancestor {
-    background-color: #7a232f;
+/*#forbottom {
+    min-height: calc(100% - 188px);
+}*/
+
+/****************************
+* header, footer
+*/
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+
+#header, #myfooter {
+    background-color: #e01a4d;
+}
+
+#header {
+    height: 120px;
+}
+
+#masthead h1 a {
+    font-family: WorkSans-Bold;
+    font-size: 50px;
+    color: #fff;
+    line-height: 120px;
+    margin-left: 20px;
+    letter-spacing: -3px;
+}
+
+#masthead .right {
+    margin-right: 20px;
+    padding-top: 31px;
+}
+
+.strike1 {
+    text-decoration: line-through;
+    color: #000;
+}
+
+.strike2 {
+    color: #fff;
+    font-family: WorkSans-Bold;
+}
+
+.home #myfooter {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+#myfooter {
+    height: 30px;
+    color: #fff;
+}
+
+#myfooter .left, #myfooter .right {
+    padding: 5px 20px;
+    line-height: 20px;
+}
+
+.strike {
+    text-decoration: line-through;
+}
+
+.logo, .twitter, .facebook {
+    background-image: url('icons.png');
+    width: 25px;
+    height: 20px;
+}
+
+.logo {
+    background-position: 0 0;
+    float: left;
+}
+
+.twitter {
+    background-position: -50px 0;
+    float: right;
+}
+
+.facebook {
+    background-position: -25px 0;
+    float: right;
 }
 
 /****************************
@@ -113,21 +187,6 @@ a, a:link, a:visited, a:active, a:hover {
 	background-color: rgba(0, 0, 0, 0.8) !important;
 	box-shadow: none !important;
 	padding: 5px;
-}
-
-/****************************
-* footer
-*/
-#footer2-inside {
-    text-align: center;
-}
-
-#footer2-inside table td {
-	font-size: 14px;
-}
-
-#footer a {
-    color: #fff;
 }
 
 /****************************
@@ -211,6 +270,56 @@ span.edit-link {
     padding-top: 0;
     padding-bottom: 0;
 }
+
+/****************************
+* navbar
+*/
+
+#access, #nav-toggle, #access ul li {
+    background-color: #e9e9e9 !important;
+}
+
+#access ul li a {
+    font-size: 16px !important;
+}
+
+#access a span {
+    color: #000;
+    text-transform: lowercase;
+    padding-top: 10px; 
+    padding-bottom: 10px; 
+    letter-spacing: -1px;
+}
+
+#access .current-menu-item a span {
+    color: #e01a4d;
+}
+
+#access li.wpm-languages {
+    float: right;
+}
+
+#access li.wpm-languages.active-language {
+    font-family: 'WorkSans-Bold';
+}
+
+#access li.wpm-languages a>span {
+    padding: 10px;
+}
+
+#access li.wpm-languages a>span>span {
+    padding: 0;
+}
+
+#access div.menu {
+    max-width: none;
+    margin-left: 39px;
+}
+
+.page #access ul > li.current_page_item, .page #access ul > li.current-menu-item, .page #access ul > li.current_page_ancestor, .page #access ul > li.current-menu-ancestor {
+    background-color: #e01a4d;
+}
+
 
 /****************************
 * media

@@ -1,0 +1,372 @@
+html, body {
+	height: 100%;
+}
+
+.strike {
+	text-decoration: line-through;
+}
+
+.front #content {
+    padding: 0;
+}
+
+.front-header {
+    padding: 20px;
+}
+
+.front-footer {
+    position: absolute;
+}
+
+.footer {
+	bottom: 0;
+    color: #ffffff;
+    font-size: 18px;
+    width: 100%;
+    background-color: #e01a4d;
+    display: inline-block;
+}
+
+.footer .left, .footer .right {
+    padding: 20px;
+}
+
+.front-slidedown {
+	background-image: url('icons.png');
+	width: 32px;
+	height: 32px;
+	background-position: -125px 0;
+	margin: auto;
+}
+
+.front .wpm-language-switcher, .front .wpm-language-switcher li {
+    float: left;
+}
+
+.wpm-language-switcher li.active span {
+    font-family: 'WorkSans-Bold';
+}
+
+.front .left {
+    float: left;
+}
+
+.front .right {
+    float: right;
+}
+
+.landing {
+    clear: both;
+}
+
+#landing1 {
+    background-color: #e01a4d;
+    color: #ffffff;
+}
+
+.front #landing1.active {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+}
+
+#landing1 h1 {
+    color: #ffffff;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'WorkSans-Bold';
+    letter-spacing: -3px;
+}
+
+#landing1 .center p {
+    margin: 100px;
+}
+
+#landing1 .strike1 {
+    font-family: 'WorkSans-Bold';
+}
+
+.switcher-list li a, .switcher-list li.active>span {
+    color: #fff;
+    padding: 5px;
+}
+
+.logo, .twitter, .facebook, .swiper-button-prev-custom, .swiper-button-next-custom {
+	background-image: url('icons.png');
+	width: 35px;
+	height: 35px;
+	float: right;
+    margin-right: 5px;
+}
+
+.logo {
+    background-position: 0 0;
+    float: left;
+}
+
+.twitter {
+	background-position: -83px 0;
+}
+
+.facebook {
+	background-position: -49px 0;
+}
+
+.swiper-button-prev-custom, .swiper-button-next-custom {
+    position: absolute;
+    top: 50%;
+    margin-top: calc(-1 * var(--swiper-navigation-size)/ 2);
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-button-prev-custom {
+    background-position: -169px 0;
+    right: auto;
+    left: 0;
+}
+
+.swiper-button-next-custom {
+    background-position: -208px 0;
+    right: 0;
+    left: auto;
+}
+
+.front .entry-content {
+	top: 50%;
+    position: absolute;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 80%;
+}
+
+.front-slidedown {
+    cursor: pointer;
+}
+
+.landing .col_left {
+    width: 40%;
+    padding: 50px;
+    float: left;
+}
+
+.landing h1 {
+    font-size: 30px;
+    font-family: 'WorkSans-Bold';
+    letter-spacing: -1px;
+}
+
+.landing .col_right {
+    width: 40%;
+    padding: 50px;
+    margin-left: 50%;
+}
+
+#landing1 .fronticon {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+#landing2, #landing4 {
+    color: #e01a4d;
+    background-color: #fff;
+}
+
+#landing3, #landing5 {
+    color: #fff;
+    background-color: #e01a4d;
+}
+
+a.landing-btn {
+    width: 220px;
+    padding: 5px;
+    display: block;
+    line-height: 1;
+    font-size: 14px;
+    font-family: 'WorkSans-Bold';
+}
+
+#landing2 a.landing-btn {
+    color: #fff;
+    background-color: #e01a4d;
+}
+
+#landing3 a.landing-btn, #landing5 a.landing-btn {
+    color: #e01a4d;
+    background-color: #fff;
+}
+
+#landing2 .col_right h1 {
+    color: #e01a4d;
+    font-size: 60px;
+    text-align: right;
+}
+
+#landing2 .col_right h3 {
+    color: #e01a4d;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+#landing2 .col_left p {
+    color: #000;
+}
+
+#landing2 .col_right .type {
+    color: #000;
+    font-family: 'WorkSans-Bold';
+    font-size: 14px;
+    text-align: right;
+    line-height: 2;
+}
+
+#landing2 .col_right .svgimg {
+    margin-left: -5px;
+    margin-bottom: -4px;
+}
+
+#landing2 .col_right .num {
+    font-family: 'WorkSans-Bold';
+    font-size: 20px;
+}
+
+.aporofobia .num {
+    color: #f0e52b;
+}
+.homofobia .num {
+    color: #4f4898;
+}
+.otros .num {
+    color: #75549e;
+}
+.islamofobia .num {
+    color: #4faf42;
+}
+.odioideologico .num {
+    color: #c26b35;
+}
+.racismoxenofobia .num {
+    color: #db1c46;
+}
+.transfobia .num {
+    color: #bb61a2;
+}
+.futbol .num {
+    color: #29b0e6;
+}
+.antisemitismo .num {
+    color: #c23f32;
+}
+
+#landing2 .col_right .bar {
+    height: 20px;    
+    display: inline-flex;
+    margin-left: 10px;
+}
+
+.aporofobia .bar {
+    background-color: #f0e52b;
+}
+.homofobia .bar {
+    background-color: #4f4898;
+}
+.otros .bar {
+    background-color: #75549e;
+}
+.islamofobia .bar {
+    background-color: #4faf42;
+}
+.odioideologico .bar {
+    background-color: #c26b35;
+}
+.racismoxenofobia .bar {
+    background-color: #db1c46;
+}
+.transfobia .bar {
+    background-color: #bb61a2;
+}
+.futbol .bar {
+    background-color: #29b0e6;
+}
+.antisemitismo .bar {
+    background-color: #c23f32;
+}
+
+#landing3 .col_right {
+    padding: 50px 50px 0 50px;
+}
+
+#landing4 .swiper-container {
+    width: 90%;
+    height: 500px;
+}
+
+#landing4 .swiper-container .col_left {
+    width: 25%;
+}
+
+#landing4 .swiper-container .col_right {
+    width: 60%;
+    padding: 0;
+    margin-left: 35%;
+}
+
+#landing5 {
+    padding: 50px;
+}
+
+#landing5 .tipo {
+    border-collapse: separate;
+    border-spacing: 0 50px;
+}
+
+#landing5 tr td {
+    text-align: center;
+    border-right: solid 1px #fff;
+    padding: 0px 24px;
+}
+
+#landing5 .clip {
+    min-height: 200px;
+}
+
+#landing5 h3 {
+    font-size: 20px;
+    font-family: 'WorkSans-Bold';
+    min-height: 40px;
+    line-height: 20px;
+}
+
+#landing5 h3 .strike1 {
+    text-decoration: line-through;
+    color: #000;
+}
+
+#landing5 h3 .strike2 {
+    color: #fff;
+}
+
+#landing5 .landing-btn {
+    text-align: center;
+    max-width: 120px;
+    display: inline-block;
+}
+
+#landing5 p {
+    font-size: 14px;
+    line-height: 16px;
+    min-height: 90px;
+}
+
+#landing5 .feminicidio {
+    text-align: center;
+}
+
+#landing5 .feminicidio a {
+    color: #000;
+    font-family: 'WorkSans-Bold';
+}

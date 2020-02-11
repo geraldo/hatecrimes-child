@@ -31,16 +31,9 @@
 	<header id="header">
 		<div id="masthead">
 		<?php cryout_masthead_hook(); ?>
-			<div id="branding" role="banner" >
-				<?php cryout_branding_hook();?>
-				<?php cryout_header_widgets_hook(); ?>
-				<div style="clear:both;"></div>
+			<h1 class="left"><a href="<?php echo get_site_url(); ?>">memoria contra el <span class="strike1"><span class="strike2">olvido</span></span></a></h1>
 
-				<div class="social">
-					<a href="https://www.facebook.com/Cr%C3%ADmenes-de-Odio-1645711305670191/"><img src="<?php echo get_site_url(); ?>/wp-content/uploads/2015/11/FB_capcalera.png" /></a><br>
-					<a href="https://twitter.com/crimenesdeodio"><img src="<?php echo get_site_url(); ?>/wp-content/uploads/2015/11/TW_capcalera.png" /></a>
-				</div>
-			</div><!-- #branding -->
+			<div class="right"><a href="<?php echo get_site_url(); ?>"><img src="https://crimenesdeodio.info/dev/wp-content/uploads/2020/01/icon.png" alt="" width="58" height="58" class="alignright wp-image-1428" /></a></div>
 			<a id="nav-toggle"><span>&nbsp;</span></a>
 			<nav id="access" role="navigation">
 				<?php cryout_access_hook();?>

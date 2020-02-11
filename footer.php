@@ -12,18 +12,14 @@
 ?>	<div style="clear:both;"></div>
 	</div> <!-- #forbottom -->
 
-	<footer id="footer" role="contentinfo">
-		<div id="colophon">
-		
-			<?php get_sidebar( 'footer' );?>
-			
-		</div><!-- #colophon -->
+	<footer id="myfooter" role="contentinfo">
 
-		<div id="footer2">
-			<div id="footer2-inside">
-				<a href="/copyleft">copyleft crimenesdeodio.info 2015</a>
-			</div> <!-- #footer2-inside -->
-		</div><!-- #footer2 -->
+		<div class="left">
+			<a href="<?php echo get_site_url(); ?>"><span class="logo"></span></a><strong>crimenes de <span class="strike">odio</span></strong>
+		</div>
+		<div class="right">
+			<a class="icon" href="https://twitter.com/crimenesdeodio"><span class="twitter"></span></a><a class="icon" href="https://www.facebook.com/Cr%C3%ADmenes-de-Odio-1645711305670191/"><span class="facebook"></span></a>
+		</div>
 
 	</footer><!-- #footer -->
 

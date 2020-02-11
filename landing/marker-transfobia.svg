@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="7.9022222mm"
+   height="7.9022222mm"
+   viewBox="0 0 28 28"
+   id="svg15581"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="marker-transfobia.svg">
+  <defs
+     id="defs15583" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.959798"
+     inkscape:cx="17.839531"
+     inkscape:cy="11.188831"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1547"
+     inkscape:window-height="876"
+     inkscape:window-x="53"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0">
+    <sodipodi:guide
+       position="-0.99997691,63.144671"
+       orientation="1,0"
+       id="guide16158" />
+    <sodipodi:guide
+       position="29.052063,44.709392"
+       orientation="1,0"
+       id="guide16160" />
+    <sodipodi:guide
+       position="-21.203027,29.052022"
+       orientation="0,1"
+       id="guide16162" />
+    <sodipodi:guide
+       position="-19.940337,-1.0000174"
+       orientation="0,1"
+       id="guide16164" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata15586">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-366.92773,-268.27316)">
+    <circle
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.74715865;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
+       id="path16166"
+       cx="380.92773"
+       cy="282.27316"
+       r="13.126421" />
+    <g
+       transform="matrix(0.14954203,0,0,-0.14954203,-715.36733,2707.7058)"
+       id="g4146"
+       style="fill:#bb61a2;fill-opacity:1">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4148"
+         style="fill:#bb61a2;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         d="m 7376.96,16227.9 -28.08,8.8 c -1.42,17.3 -7.37,31.5 -17.79,31.2 -7.12,-0.3 -12.97,-6.6 -14.29,-21.1 l -23.45,7.4 c 7.43,14.1 22.6281,22.153 38.6,22.7 21.9683,0.753 42.21,-11.4 44.85,-36.4 0.05,-0.7 0.21,-1.3 0.26,-1.8 0.41,-3.7 0.35,-7.3 -0.1,-10.8 z m -11.6,-21.4 -5.34,-7.2 -0.05,0 c -8.44,-13.9 -16.93,-27.7 -25.43,-41.6 l -0.5,-1 -0.46,-0.1 -0.66,1 c -7.48,8.2 -15,16.5 -22.48,24.7 l 46.07,16.1 -45.81,-11.3 c -4.58,6.1 -9.16,12.2 -13.69,18.3 -7.01,9.3 -10.06,19.7 -8.59,30.9 0.61,6.1 2.39,11.5 5.03,16.1 l 22.28,-7.9 c -0.36,-2.7 -0.56,-5.7 -0.56,-9.1 0,-19.7 6.2,-34.2 17.09,-34.2 10.68,0 14.23,12.2 14.03,29.1 0,1.1 -0.05,2.3 -0.1,3.4 l 26.7,-9.4 c -1.02,-6.4 -3.46,-12.4 -7.53,-17.8 z m -34.88,93.5 c -44.35,0 -80.25,-35.9 -80.25,-80.2 0,-44.3 35.9,-80.3 80.25,-80.3 44.34,0 80.24,36 80.24,80.3 0,44.3 -35.9,80.2 -80.24,80.2"
+         sodipodi:nodetypes="cccccscccccccccccccccccsscccccsssc" />
+    </g>
+  </g>
+</svg>
